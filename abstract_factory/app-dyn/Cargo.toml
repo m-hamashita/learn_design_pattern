@@ -1,0 +1,9 @@
+[package]
+name = "app-dyn"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+gui = { path = "../gui" }
+macos-gui = { path = "../macos-gui" }
+windows-gui = { path = "../windows-gui" }
