@@ -5,6 +5,11 @@ use device::{Device, Radio, Tv};
 use remotes::{AdvancedRemove, BasicRemote, HasMutableDevice, Remote};
 
 fn main() {
+    // 異なる実装（デバイスの追加等）は共通のインターフェース（Device）に従っている限り交換が可能
+    // 具体的なデバイスは Device trait を実装することで追加できる
+    // Remote は Device に依存している
+    // Device trait が実装されている限り、どのようなデバイスでも Remote に接続できる
+    // つまり Device と Remote は独立して拡張できる
     test_device(Tv::default());
     test_device(Radio::default());
 }
